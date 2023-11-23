@@ -1,0 +1,11 @@
+cd backend
+npm init -y
+npm i express mysql nodemon
+node index.js
+npm start
+cd clients 
+npx create-react-app .
+npm i react-router-dom
+npm i axios
+backend npm i cors
+npm start
