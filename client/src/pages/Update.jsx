@@ -16,7 +16,7 @@ const Update = () => {
 
   const bookId = location.pathname.split("/")[2];
 
-  const handleChange = (e) => {
+  const setUpdate = (e) => {
     setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -39,26 +39,26 @@ const Update = () => {
         type="text"
         placeholder="Book title"
         name="title"
-        onChange={handleChange}
+        onChange={setUpdate}
       />
       <textarea
         rows={5}
         type="text"
         placeholder="Book desc"
         name="desc"
-        onChange={handleChange}
+        onChange={setUpdate}
       />
       <input
         type="number"
         placeholder="Book price"
         name="price"
-        onChange={handleChange}
+        onChange={setUpdate}
       />
       <input
         type="text"
         placeholder="Book cover"
         name="cover"
-        onChange={handleChange}
+        onChange={setUpdate}
       />
       <button onClick={handleClick}>Update</button>
       {error && "Something went wrong!"}
